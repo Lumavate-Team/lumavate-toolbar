@@ -4,11 +4,6 @@
  * and imports for stencil collections that might be configured in your stencil.config.js file
  */
 
-import '@stencil/router';
-
-import {
-  MatchResults,
-} from '@stencil/router';
 
 declare global {
   interface HTMLStencilElement extends HTMLElement {
@@ -20,90 +15,61 @@ declare global {
 
 
 import {
-  AppHome as AppHome
-} from './components/app-home/app-home';
+  LumavateToolbarButton as LumavateToolbarButton
+} from './components/lumavate-toolbar-button/lumavate-toolbar-button';
 
 declare global {
-  interface HTMLAppHomeElement extends AppHome, HTMLStencilElement {
+  interface HTMLLumavateToolbarButtonElement extends LumavateToolbarButton, HTMLStencilElement {
   }
-  var HTMLAppHomeElement: {
-    prototype: HTMLAppHomeElement;
-    new (): HTMLAppHomeElement;
+  var HTMLLumavateToolbarButtonElement: {
+    prototype: HTMLLumavateToolbarButtonElement;
+    new (): HTMLLumavateToolbarButtonElement;
   };
   interface HTMLElementTagNameMap {
-    "app-home": HTMLAppHomeElement;
+    "lumavate-toolbar-button": HTMLLumavateToolbarButtonElement;
   }
   interface ElementTagNameMap {
-    "app-home": HTMLAppHomeElement;
+    "lumavate-toolbar-button": HTMLLumavateToolbarButtonElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "app-home": JSXElements.AppHomeAttributes;
+      "lumavate-toolbar-button": JSXElements.LumavateToolbarButtonAttributes;
     }
   }
   namespace JSXElements {
-    export interface AppHomeAttributes extends HTMLAttributes {
-      
+    export interface LumavateToolbarButtonAttributes extends HTMLAttributes {
+      item?: any;
     }
   }
 }
 
 
 import {
-  AppProfile as AppProfile
-} from './components/app-profile/app-profile';
+  LumavateToolbar as LumavateToolbar
+} from './components/lumavate-toolbar/lumavate-toolbar';
 
 declare global {
-  interface HTMLAppProfileElement extends AppProfile, HTMLStencilElement {
+  interface HTMLLumavateToolbarElement extends LumavateToolbar, HTMLStencilElement {
   }
-  var HTMLAppProfileElement: {
-    prototype: HTMLAppProfileElement;
-    new (): HTMLAppProfileElement;
+  var HTMLLumavateToolbarElement: {
+    prototype: HTMLLumavateToolbarElement;
+    new (): HTMLLumavateToolbarElement;
   };
   interface HTMLElementTagNameMap {
-    "app-profile": HTMLAppProfileElement;
+    "lumavate-toolbar": HTMLLumavateToolbarElement;
   }
   interface ElementTagNameMap {
-    "app-profile": HTMLAppProfileElement;
+    "lumavate-toolbar": HTMLLumavateToolbarElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "app-profile": JSXElements.AppProfileAttributes;
+      "lumavate-toolbar": JSXElements.LumavateToolbarAttributes;
     }
   }
   namespace JSXElements {
-    export interface AppProfileAttributes extends HTMLAttributes {
-      match?: MatchResults;
-    }
-  }
-}
-
-
-import {
-  MyApp as MyApp
-} from './components/my-app/my-app';
-
-declare global {
-  interface HTMLMyAppElement extends MyApp, HTMLStencilElement {
-  }
-  var HTMLMyAppElement: {
-    prototype: HTMLMyAppElement;
-    new (): HTMLMyAppElement;
-  };
-  interface HTMLElementTagNameMap {
-    "my-app": HTMLMyAppElement;
-  }
-  interface ElementTagNameMap {
-    "my-app": HTMLMyAppElement;
-  }
-  namespace JSX {
-    interface IntrinsicElements {
-      "my-app": JSXElements.MyAppAttributes;
-    }
-  }
-  namespace JSXElements {
-    export interface MyAppAttributes extends HTMLAttributes {
-      
+    export interface LumavateToolbarAttributes extends HTMLAttributes {
+      backgroundcolor?: string;
+      items?: string;
     }
   }
 }
