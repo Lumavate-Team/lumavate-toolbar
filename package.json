@@ -1,6 +1,6 @@
 {
 	"name": "lumavate-toolbar",
-	"private": true,
+	"private": false,
 	"version": "0.0.1",
 	"description": "Lumavate Toolbar Web Component",
 	"files": [
